@@ -1,8 +1,17 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import logo from '../assets/logo.png'
+import { FiLogOut } from 'react-icons/fi' // 👈 Import logout icon
 
 function Navbar() {
+  const navigate = useNavigate()
+
+  const handleLogout = () => {
+    // Clear auth (token/session if any)
+    // Redirect to login page
+    navigate('/')
+  }
+
   const navStyle = {
     position: 'fixed',
     top: '0',
@@ -48,6 +57,19 @@ function Navbar() {
     transition: 'color 0.3s ease'
   }
 
+  const logoutBtnStyle = {
+    background: 'none',
+    border: 'none',
+    color: 'black',
+    fontSize: '18px',
+    cursor: 'pointer',
+    display: 'flex',
+    alignItems: 'center',
+    gap: '5px',
+    padding: '5px 10px',
+    transition: 'color 0.3s ease'
+  }
+
   const navPaths = {
     Home: '/home',
     About: '/about',
@@ -74,6 +96,16 @@ function Navbar() {
             </Link>
           ))}
         </div>
+        {/* Logout Button */}
+        <button
+          style={logoutBtnStyle}
+          onClick={handleLogout}
+          onMouseOver={e => e.target.style.color = '#dc3545'}
+          onMouseOut={e => e.target.style.color = 'black'}
+        >
+          <FiLogOut size={20} />
+          Logout
+        </button>
       </div>
     </nav>
   )
