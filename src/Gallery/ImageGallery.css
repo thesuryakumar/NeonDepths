@@ -1,0 +1,44 @@
+.aqua-vision-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #e0f7ff;
+  padding: 40px;
+  border-radius: 12px;
+  max-width: 1200px;
+  margin: 0px auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1.4s ease-in-out;
+}
+
+/* Aqua-themed glowing buttons */
+.aqua-button {
+  background-color: #041822;
+  color: #00eaff;
+  border: 2px solid #00eaff;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.2);
+}
+
+.aqua-button:hover:not(:disabled) {
+  background-color: #00eaff;
+  color: #041822;
+  box-shadow: 0 0 18px rgba(0, 255, 255, 0.6);
+}
+
+.aqua-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  border-color: #99cfdc;
+  color: #99cfdc;
+  box-shadow: none;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}

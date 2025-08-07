@@ -1,0 +1,154 @@
+.aqua-vision-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #e0f7ff;
+  padding: 40px;
+  border-radius: 12px;
+  max-width: 1200px;
+  margin: 0px auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1.4s ease-in-out;
+}
+
+.facility-heading {
+  font-size: 2.4rem;
+  color: #0a3d62;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.event-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.event-card {
+  background: white;
+  border-radius: 16px;
+  width: 300px;
+  padding: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transition: transform 0.4s ease;
+  cursor: pointer;
+}
+
+.event-card:hover {
+  transform: scale(1.05);
+}
+
+.event-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 16px;
+}
+
+.event-card h3 {
+  color: #0a3d62;
+  margin-bottom: 10px;
+}
+
+.event-card p {
+  color: #333;
+  font-size: 1rem;
+}
+
+.register-section {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.register-btn {
+  background-color: #0a3d62;
+  color: white;
+  padding: 14px 28px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  animation: pulse 1.5s infinite;
+}
+
+.register-btn:hover {
+  background-color: #074173;
+}
+
+/* Heart Animation */
+.hearts-animation::before,
+.hearts-animation::after {
+  content: '💖';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  animation: fall 3s linear infinite;
+  font-size: 30px;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+.hearts-animation::after {
+  content: '❤️';
+  left: 60%;
+  animation-delay: 0.3s;
+}
+
+/* Flower Petals Animation */
+.flowers-animation::before,
+.flowers-animation::after {
+  content: '🌸';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  animation: fall 3s linear infinite;
+  font-size: 28px;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+.flowers-animation::after {
+  content: '💐';
+  left: 40%;
+  animation-delay: 0.2s;
+}
+
+/* Common Fall Animation */
+@keyframes fall {
+  0% {
+    transform: translateY(-40px) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(400px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* Button Pulse Animation */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(10, 61, 98, 0.6);
+  }
+  70% {
+    box-shadow: 0 0 0 12px rgba(10, 61, 98, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(10, 61, 98, 0);
+  }
+}
+
+/* Fade-in for container */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,16 @@
+.marriage-bg {
+  background: linear-gradient(to right, #fff0f5, #ffe4e1);
+  animation: fadeIn 1s ease-in-out;
+}
+
+.text-marriage {
+  color: #b30059;
+}
+
+.screen {
+  background-color: #b30059;
+  color: white;
+  padding: 10px;
+  border-radius: 6px;
+  font-weight: bold;
+}
